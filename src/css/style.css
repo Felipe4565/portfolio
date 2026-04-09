@@ -1,0 +1,200 @@
+/* Variables principales (couleurs + animation) */
+:root {
+    --noir: #0a0a0a;
+    --gris-carte: #161616;
+    --or: #d4af37;
+    --or-rgb: 212, 175, 55;
+    --blanc: #f5f5f5;
+    --gris-texte: #a0a0a0;
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style global */
+body {
+    background-color: var(--noir);
+    color: var(--blanc);
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Section projets */
+#projets { padding: 100px 10%; }
+
+/* Titre */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--or);
+}
+
+/* Grille des projets */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+/* Image projet */
+.projet-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Effet zoom image au hover */
+.card:hover .projet-img {
+    transform: scale(1.05);
+}
+
+/* Carte projet */
+.card {
+    background: var(--gris-carte);
+    padding: 30px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition);
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+/* Effet hover carte */
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--or);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Conteneur image */
+.img-placeholder {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+/* Texte projet */
+.card h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--or);
+}
+
+.card p {
+    color: var(--gris-texte);
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 20px;
+    flex-grow: 1; /* pousse les tags en bas */
+}
+
+/* Fond spécial mockup */
+.mockup-bg {
+    background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+}
+
+/* Images centrées sans déformation */
+.mobile-screenshot,
+.java-screenshot {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 2px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: var(--transition);
+}
+
+/* Effet hover images */
+.card:hover .mobile-screenshot,
+.card:hover .java-screenshot {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* Conteneur tags */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+/* Style tags */
+.tags span {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+    border-radius: 50px;
+    color: var(--or);
+    background: rgba(var(--or-rgb), 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+/* Hover tags */
+.tags span:hover {
+    background: rgba(var(--or-rgb), 0.15);
+    border-color: var(--or);
+    transform: translateY(-2px);
+}
+
+/* Responsive : projets */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive : navbar */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+}
+
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.card-link h3, 
+.card-link p {
+    text-decoration: none;
+    color: inherit;
+}

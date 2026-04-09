@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe Alvariza Billar | Développeur Web & Mobile</title>
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header avec navigation -->
+    <nav>
+        <div class="logo">FELIPE ALVARIZA BILLAR</div>
+        <div class="links">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Section PDP et bouton découvrir -->
+    <header class="hero">
+        <div class="hero-content"> <div class="avatar">
+                <img src="src/images/photo_profil.png" alt="...">
+            </div>
+            <h1>FELIPE ALVARIZA BILLAR</h1>
+            <p class="subtitle">DÉVELOPPEUR WEB & MOBILE</p>
+            <p class="bio">Conception d'applications performantes et d'interfaces modernes, du web au mobile.</p>
+            <a href="projets.html" class="btn">DÉCOUVRIR MON TRAVAIL</a>
+        </div>
+    </header>
+
+    <!-- Section projets -Accueil -->
+    <section id="projets">
+    <h2>PROJETS PHARES</h2>
+    <div class="grid">
+
+        <a href="projets.html#menuiserie" class="card-link">
+            <div class="card">
+                <div class="img-placeholder">
+                    <img src="src/images/Accueil_IEB.png" class="projet-img">
+                </div>
+                <h3>Site Vitrine & Admin - Menuiserie</h3>
+                <p>Conception sur mesure pour des artisans (20 ans d'expertise). Système complet de gestion de contenu (CMS propriétaire).</p>
+                <div class="details-projet" style="font-size: 0.8rem; color: var(--or); margin-bottom: 15px;">
+                    <strong>Points clés :</strong> Architecture CRUD, Sécurisation, UI/UX.
+                </div>
+                <div class="tags">
+                    <span>PHP</span><span>MySQL</span><span>CSS3</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="projets.html#agricole" class="card-link">
+            <div class="card">
+                <div class="img-placeholder mockup-bg"> 
+                    <img src="src/images/Accueil_Appli.png" alt="App Flutter Agricole" class="mobile-screenshot">
+                </div>
+                <h3>App de Gestion Agricole & des Ressources</h3>
+                <p>Solution mobile dédiée aux agriculteurs : suivi des prix, API Google News et authentification biométrique.</p>
+                <div class="details-projet" style="font-size: 0.8rem; color: var(--or); margin-bottom: 15px;">
+                    <strong>Points clés :</strong> Temps réel (Firebase), Biométrie, REST API.
+                </div>
+                <div class="tags">
+                    <span>Flutter</span><span>Dart</span><span>Firebase</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="projets.html#sport" class="card-link">
+            <div class="card">
+                <div class="img-placeholder mockup-bg">
+                    <img src="src/images/App_Java.png" alt="App Java" class="java-screenshot">
+                </div>
+                <h3>Logiciel de Gestion - Club de Sport</h3>
+                <p>Application Desktop Java permettant de planifier des tournois via un calendrier dynamique et interface sonore immersive.</p>
+                <div class="details-projet" style="font-size: 0.8rem; color: var(--or); margin-bottom: 15px;">
+                    <strong>Points clés :</strong> Database, Planification, UX Multimédia.
+                </div>
+                <div class="tags">
+                    <span>Java</span><span>Swing</span><span>MySQL</span>
+                </div>
+            </div>
+        </a>
+
+    </div>
+    </section>
+
+    <!-- Section Compétences -Accueil -->
+    <section id="competences" style="text-align: center; padding: 50px 10%;">
+        <h2>STACK TECHNIQUE</h2>
+        <div class="tags" style="justify-content: center; margin-top: 20px;">
+            <span style="font-weight: 600; border-color: var(--or);">PHP</span>
+            <span style="font-weight: 600; border-color: var(--or);">Java</span>
+            <span style="font-weight: 600; border-color: var(--or);">Dart / Flutter</span>
+            <span style="font-weight: 600; border-color: var(--or);">JavaScript</span>
+
+            <span style="border-color: rgba(255,255,255,0.2);">HTML5 / CSS3</span>
+            
+            <span>SQL / MySQL</span>
+            <span>Firebase</span>
+            <span>API REST</span>
+            <span>Git / GitHub</span>
+            <span>Swing / JavaFX</span>
+            <span>Responsive Design</span>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="contact">
+        <h2>Travaillons Ensemble</h2>
+        <p class="footer-text">Vous avez un projet en tête ou une opportunité de collaboration ? Mon inbox est toujours ouverte.</p>
+        
+        <div class="contact-container">
+            <a href="mailto:felialvariza@gmail.com" class="contact-link">
+                <span>✉</span> felialvariza@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/felipe-alvariza-186155293/" target="_blank" class="contact-link">
+                <span>in</span> LinkedIn
+            </a>
+        </div>
+
+            <p class="copyright">© 2026 Felipe Alvariza Billar • Développeur Full Stack & DBA</p>
+    </footer>
+
+</body>
+</html>

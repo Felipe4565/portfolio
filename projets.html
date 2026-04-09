@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Configuration de base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Réalisations | Felipe Alvariza Billar</title>
+    
+    <!-- Librairie pour la galerie -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/5.4.2/photoswipe.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/projets.css">
+    <link rel="stylesheet" href="src/css/galery.css">
+
+    <!-- Polices -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">FELIPE ALVARIZA BILLAR</div>
+        <div class="links">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html" style="color: var(--or)">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Bannière -->
+    <header class="projets-hero">
+        <div class="hero-content">
+            <h1>PORTFOLIO</h1>
+            <p class="subtitle">EXPLORATION DE MES RÉALISATIONS TECHNIQUES</p>
+        </div>
+    </header>
+
+    <!-- Projets -->
+<main class="detailed-projects">
+    
+    <section id="menuiserie" class="project-block">
+        <div class="project-image desktop-card pswp-gallery" id="gallery-ieb">
+            <a href="src/images/Accueil_IEB.png" data-pswp-width="2478" data-pswp-height="1368" target="_blank">
+                <img src="src/images/Accueil_IEB.png" alt="Site Menuiserie">
+                <div class="gallery-overlay"><span>Afficher la galerie</span></div>
+            </a>
+            <a href="src/images/IEB2.png" data-pswp-width="2485" data-pswp-height="1370" class="hidden-link"></a>
+            <a href="src/images/IEB3.png" data-pswp-width="2465" data-pswp-height="1377" class="hidden-link"></a>
+        </div>
+
+        <div class="project-text">
+            <span class="number">01</span>
+            <h2>IEB Menuiserie : Digitalisation d'Artisans</h2>
+            <span class="tech-stack">PHP • MySQL • Architecture CRUD • SEO</span>
+            <p>Transformation digitale d'une menuiserie.</p>
+            <ul class="points-cles">
+                <li><strong>Back-Office :</strong> Gestion simple.</li>
+                <li><strong>UX :</strong> Interface rapide.</li>
+                <li><strong>SEO :</strong> Optimisation Google.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="agricole" class="project-block reverse">
+        <div class="project-image mobile-card pswp-gallery" id="gallery-agri">
+            <a href="src/images/Accueil_Appli.png" data-pswp-width="1080" data-pswp-height="2340" target="_blank">
+                <img src="src/images/Accueil_Appli.png" alt="App Agricole">
+                <div class="gallery-overlay"><span>Afficher la galerie</span></div>
+            </a>
+            <a href="src/images/Appli2.png" data-pswp-width="617" data-pswp-height="1284" class="hidden-link"></a>
+            <a href="src/images/Appli3.png" data-pswp-width="621" data-pswp-height="1340" class="hidden-link"></a>
+        </div>
+
+        <div class="project-text">
+            <span class="number">02</span>
+            <h2>ProPrice : App Agricole</h2>
+            <span class="tech-stack">Flutter • Firebase</span>
+            <p>Suivi des ressources en temps réel.</p>
+            <ul class="points-cles">
+                <li><strong>Temps réel :</strong> API.</li>
+                <li><strong>Sécurité :</strong> Biométrie.</li>
+                <li><strong>Dashboard :</strong> Données.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sport" class="project-block">
+        <div class="project-image desktop-card pswp-gallery" id="gallery-java">
+            <a href="src/images/App_Java.png" data-pswp-width="1600" data-pswp-height="1200" target="_blank">
+                <img src="src/images/App_Java.png" alt="Logiciel Java">
+                <div class="gallery-overlay"><span>Afficher la galerie</span></div>
+            </a>
+            <a href="src/images/Desktop2.png" data-pswp-width="1174" data-pswp-height="886" class="hidden-link"></a>
+            <a href="src/images/Desktop3.png" data-pswp-width="1175" data-pswp-height="888" class="hidden-link"></a>
+        </div>
+
+        <div class="project-text">
+            <span class="number">03</span>
+            <h2>Gestion Club</h2>
+            <span class="tech-stack">Java • MySQL</span>
+            <p>Logiciel de gestion sportive.</p>
+            <ul class="points-cles">
+                <li><strong>Planning :</strong> Tournois auto.</li>
+                <li><strong>Interface :</strong> Simple.</li>
+                <li><strong>BDD :</strong> Utilisateurs.</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h2>Travaillons Ensemble</h2>
+        <p class="footer-text">Contactez-moi.</p>
+        
+        <div class="contact-container">
+            <a href="mailto:felialvariza@gmail.com" class="contact-link">
+                <span>✉</span> felialvariza@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/felipe-alvariza-186155293/" target="_blank" class="contact-link">
+                <span>in</span> LinkedIn
+            </a>
+        </div>
+
+        <p class="copyright">© 2026 Felipe Alvariza Billar</p>
+    </footer>
+
+    <!-- Initialisation de la galerie -->
+    <script type="module">
+        import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallery: '.pswp-gallery',
+            children: 'a',
+            pswpModule: () => import('https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js'),
+
+            // Marges et fond
+            padding: { top: 80, bottom: 80, left: 50, right: 50 },
+            bgOpacity: 0.6
+        });
+
+        lightbox.init();
+    </script>
+
+</body>
+</html>

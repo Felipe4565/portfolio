@@ -1,0 +1,247 @@
+/* Variables principales */
+:root {
+    --or: #d4af37;
+    --or-rgb: 212, 175, 55;
+    --noir: #0a0a0a;
+    --gris-texte: #bbbbbb;
+    --blanc: #ffffff;
+}
+
+/* Section projets */
+.detailed-projects {
+    padding: 100px 10%;
+    background-color: var(--noir);
+}
+
+/* Bloc projet */
+.project-block {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 150px;
+}
+
+/* Inversion layout */
+.project-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Zone image */
+.project-image {
+    flex: 1.2;
+    position: relative;
+}
+
+.project-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Format desktop (grandes images) */
+.project-image.desktop-card {
+    height: 450px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+.project-image.desktop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.6s ease;
+}
+
+/* Format mobile (mockup téléphone) */
+.project-image.mobile-card {
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image.mobile-card a {
+    width: auto;
+    height: 95%;
+}
+
+.project-image.mobile-card img {
+    height: 100%;
+    max-width: 280px;
+    object-fit: contain;
+    border: 10px solid #1a1a1a;
+    border-radius: 40px;
+    background: #000;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+    transition: transform 0.6s ease;
+}
+
+/* Galerie (zone cliquable) */
+.pswp-gallery {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+/* Overlay au survol */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+    border-radius: 12px;
+}
+
+/* Adaptation overlay mobile */
+.project-image.mobile-card .gallery-overlay {
+    width: 280px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 40px;
+}
+
+/* Apparition overlay */
+.project-image:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    color: var(--or);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    padding: 10px 20px;
+    border: 1px solid var(--or);
+    border-radius: 4px;
+
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* Zoom image au hover */
+.project-block:hover img {
+    transform: scale(1.05);
+}
+
+/* Styles PhotoSwipe (lightbox) */
+.pswp__bg {
+    background: rgba(10, 10, 10, 0.6) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.pswp__img {
+    padding: 0 !important;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.9);
+}
+
+/* Images cachées pour galerie */
+.hidden-link {
+    display: none;
+}
+
+/* Texte projet */
+.project-text {
+    flex: 1;
+}
+
+/* Numéro projet */
+.number {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: rgba(var(--or-rgb), 0.1);
+    margin-bottom: -20px;
+    display: block;
+}
+
+/* Titre */
+.project-text h2 {
+    font-size: 2.4rem;
+    color: var(--or);
+    margin-bottom: 10px;
+}
+
+/* Stack techno */
+.tech-stack {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gris-texte);
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* Description */
+.project-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* Liste points clés */
+.points-cles {
+    list-style: none;
+    padding: 0;
+}
+
+.points-cles li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+/* Flèche décorative */
+.points-cles li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--or);
+}
+
+/* Responsive projets */
+@media (max-width: 1024px) {
+    .project-block,
+    .project-block.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 350px;
+    }
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+}

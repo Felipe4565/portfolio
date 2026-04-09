@@ -1,0 +1,227 @@
+/* Variables principales (couleurs) */
+:root {
+    --or: #d4af37;
+    --or-rgb: 212, 175, 55;
+    --noir: #0a0a0a;
+    --gris-texte: #bbbbbb;
+    --blanc: #ffffff;
+}
+
+/* Section bannière */
+.projets-hero {
+    padding: 120px 10% 80px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+}
+
+.projets-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: var(--or);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+/* Conteneur des projets */
+.detailed-projects {
+    padding: 100px 10%;
+    background-color: var(--noir);
+}
+
+/* Bloc projet */
+.project-block {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    margin-bottom: 150px;
+}
+
+/* Inverse l’ordre (image à droite) */
+.project-block.reverse {
+    flex-direction: row-reverse;
+}
+
+/* Zone image */
+.project-image {
+    flex: 1.2;
+    position: relative;
+}
+
+.project-image a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Format desktop (images larges) */
+.project-image.desktop-card {
+    height: 450px;
+}
+
+.project-image.desktop-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Format mobile (simulation téléphone) */
+.project-image.mobile-card a {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image.mobile-card img {
+    max-width: 280px;
+    height: 95% !important;
+    object-fit: contain;
+    border: 12px solid #1a1a1a;
+    border-radius: 45px;
+    background: #000;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8);
+}
+
+/* Effet zoom image */
+.project-block:hover .project-image img {
+    transform: scale(1.03);
+}
+
+/* Overlay "voir galerie" */
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    border-radius: 12px;
+}
+
+/* Adaptation overlay pour format téléphone */
+.project-image.mobile-card .gallery-overlay {
+    width: 280px;
+    height: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 45px;
+}
+
+/* Affiche overlay au hover */
+.project-image:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-overlay span {
+    color: var(--or);
+    padding: 10px 20px;
+    border: 1px solid var(--or);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+/* Texte projet */
+.project-text {
+    flex: 1;
+}
+
+/* Numéro projet */
+.number {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    color: rgba(var(--or-rgb), 0.1);
+    margin-bottom: -20px;
+    display: block;
+}
+
+/* Titre projet */
+.project-text h2 {
+    font-size: 2.4rem;
+    color: var(--or);
+    margin-bottom: 10px;
+}
+
+/* Technologies */
+.tech-stack {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: var(--gris-texte);
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    display: block;
+}
+
+/* Description */
+.project-text p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #cccccc;
+    margin-bottom: 25px;
+}
+
+/* Liste points clés */
+.points-cles {
+    list-style: none;
+    padding: 0;
+}
+
+.points-cles li {
+    margin-bottom: 12px;
+    padding-left: 30px;
+    position: relative;
+}
+
+/* Flèche décorative */
+.points-cles li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--or);
+}
+
+/* Responsive projets */
+@media (max-width: 1024px) {
+    .project-block,
+    .project-block.reverse {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .project-image {
+        width: 100%;
+        height: 350px;
+    }
+
+    .project-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Cache les images secondaires de la galerie */
+.hidden-link {
+    display: none;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    nav {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+}

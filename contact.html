@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Felipe Alvariza Billar</title>
+    
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/footer.css">
+    <link rel="stylesheet" href="src/css/contact.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header avec navigation -->
+    <nav>
+        <div class="logo">FELIPE ALVARIZA BILLAR</div>
+        <div class="links">
+            <a href="index.html">Accueil</a>
+            <a href="projets.html">Projets</a>
+            <a href="competences.html">Compétences</a>
+            <a href="contact.html" style="color: var(--or)">Contact</a>
+        </div>
+    </nav>
+
+    <main class="contact-container">
+        <section class="contact-grid">
+            
+            <!-- Bloc d'information de contact -->
+            <div class="contact-info">
+                <h1>UN PROJET ? <br><span class="italic">Parlons-en.</span></h1>
+                
+                <div class="info-blocks">
+                    <div class="info-item">
+                        <p class="label">Email direct</p>
+                        <a href="mailto:felialvariza@gmail.com">felialvariza@gmail.com</a>
+                    </div>
+                    <div class="info-item">
+                        <p class="label">Réseaux</p>
+                        <a href="https://www.linkedin.com/in/felipe-alvariza-186155293/" target="_blank">LinkedIn</a>
+                    </div>
+                    <div class="info-item">
+                        <p class="label">Réseaux</p>
+                        <a href="https://github.com/Felipe4565" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-wrapper">
+                <form action="https://formspree.io/f/mbdpelgq" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="full-name">Nom complet</label>
+                        <input type="text" id="full-name" name="name" placeholder="Votre nom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-address">Votre Email</label>
+                        <input type="email" id="email-address" name="_replyto" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-content">Message</label>
+                        <textarea id="message-content" name="message" rows="5" placeholder="Décrivez votre besoin..." required></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none">
+
+                    <button type="submit" class="submit-btn">
+                        <span>ENVOYER LE MESSAGE</span>
+                        <div class="btn-line"></div>
+                    </button>
+                </form>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Section Footer -->
+    <footer>
+        <p class="copyright">© 2026 Felipe Alvariza Billar • Développeur Full Stack & DBA</p>
+    </footer>
+
+</body>
+</html>
