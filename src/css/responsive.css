@@ -1,0 +1,94 @@
+/* ============================================================
+   MOBILE RESPONSIVE (Max 768px)
+   ============================================================ */
+@media (max-width: 768px) {
+    
+    /* 1. Navigation Menu (Slide-out) */
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        position: fixed;
+        right: -100%; /* Caché hors de l'écran à droite */
+        top: 0;
+        height: 100vh;
+        width: 70%;
+        background: #0a0a0a;
+        transition: 0.5s ease-in-out;
+        z-index: 999;
+        border-left: 1px solid var(--or);
+        padding: 20px;
+    }
+
+    /* Activation du menu via JS */
+    .links.active {
+        right: 0;
+    }
+
+    /* Style des liens à l'intérieur du menu mobile */
+    .links a {
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        color: #ffffff !important; /* Force le blanc pour la visibilité */
+        text-decoration: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* 2. Burger Icon Style */
+    .burger {
+        display: block; 
+        cursor: pointer;
+        z-index: 1000;
+        padding: 10px;
+    }
+
+    .burger span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: var(--or);
+        margin: 5px;
+        transition: 0.3s;
+    }
+
+    /* 3. Animation du Burger en X (Classe toggle via JS) */
+    .burger.toggle span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .burger.toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.toggle span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    /* 4. Ajustements de structure globaux pour mobile */
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr; /* Force les cartes sur une seule colonne */
+        gap: 20px;
+    }
+
+    .project-block {
+        flex-direction: column !important; /* Empile image et texte sur projets.html */
+        text-align: center;
+    }
+}
+
+/* ============================================================
+   DESKTOP (Cacher le burger au-dessus de 768px)
+   ============================================================ */
+@media (min-width: 769px) {
+    .burger {
+        display: none;
+    }
+}

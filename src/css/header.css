@@ -218,26 +218,3 @@ h1 {
     }
 }
 
-/* Responsive mobile */
-@media (max-width: 768px) {
-    nav {
-        padding: 1.2rem 5%;
-    }
-
-    .links {
-        display: none; /* prêt pour menu burger */
-    }
-
-    .hero {
-        min-height: 70vh;
-    }
-
-    h1 {
-        font-size: 2.8rem;
-    }
-
-    .avatar {
-        width: 150px;
-        height: 150px;
-    }
-}

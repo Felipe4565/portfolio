@@ -7,16 +7,26 @@
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="src/css/footer.css">
     <link rel="stylesheet" href="src/css/header.css">
+    <link rel="stylesheet" href="src/css/responsive.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- Header avec navigation -->
     <nav>
-        <div class="logo">FELIPE ALVARIZA BILLAR</div>
-        <div class="links">
+        <div class="logo">
+            <a href="index.html" style="text-decoration: none; color: inherit;">FELIPE ALVARIZA BILLAR</a>
+        </div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="links" id="nav-links">
             <a href="index.html">Accueil</a>
-            <a href="projets.html">Projets</a>
+            <a href="projets.html" >Projets</a>
             <a href="competences.html">Compétences</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -126,6 +136,18 @@
 
             <p class="copyright">© 2026 Felipe Alvariza Billar • Développeur Full Stack & DBA</p>
     </footer>
+
+        <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+
+        if (burger) { // Sécurité pour éviter les erreurs si l'élément n'existe pas
+            burger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                burger.classList.toggle('toggle');
+            });
+        }
+    </script>
 
 </body>
 </html>

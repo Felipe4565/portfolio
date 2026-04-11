@@ -161,31 +161,6 @@ h2 {
     transform: translateY(-2px);
 }
 
-/* Responsive : projets */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Responsive : navbar */
-@media (max-width: 768px) {
-    nav {
-        padding: 20px 5%;
-        flex-direction: column;
-        gap: 15px;
-        height: auto;
-        text-align: center;
-    }
-
-    .links {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-        font-size: 0.8rem;
-    }
-}
 
 .card-link {
     text-decoration: none;
